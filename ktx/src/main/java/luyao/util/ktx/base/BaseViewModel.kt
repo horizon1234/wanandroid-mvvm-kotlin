@@ -10,9 +10,11 @@ import kotlinx.coroutines.*
  * Created by luyao
  * on 2019/5/31 16:06
  */
-open class BaseViewModel : ViewModel(), LifecycleObserver {
+open class BaseViewModel : ViewModel(){
 
     val mException: MutableLiveData<Throwable> = MutableLiveData()
+
+    val mExce: MutableLiveData<Throwable> = MutableLiveData()
 
 
     private fun launchOnUI(block: suspend CoroutineScope.() -> Unit) {

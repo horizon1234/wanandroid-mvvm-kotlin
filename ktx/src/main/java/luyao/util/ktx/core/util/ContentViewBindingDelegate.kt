@@ -20,6 +20,7 @@ import android.app.Activity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.annotation.LayoutRes
+import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
 /**
@@ -38,6 +39,8 @@ class ContentViewBindingDelegate<in R : Activity, out T : ViewDataBinding>(
         }
         return binding!!
     }
+
+
 }
 
 fun <R : Activity, T : ViewDataBinding> contentView(
